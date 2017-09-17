@@ -35,10 +35,10 @@ bdns.ws
 TLD     | Description
 ------- | ---------------------------------
 .bit    | ![](https://blockchain-dns.info/img/menu-namecoin.png) [Namecoin](https://namecoin.org)
-.emc    | ![](https://blockchain-dns.info/img/menu-namecoin.png) [Emercoin](https://emercoin.org)
-.coin   | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.org)
-.lib    | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.org)
-.bazar  | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.org)
+.emc    | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.com)
+.coin   | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.com)
+.lib    | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.com)
+.bazar  | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.com)
 .bbs    | [OpenNIC](https://wiki.opennic.org/opennic/dot)
 .chan   | [OpenNIC](https://wiki.opennic.org/opennic/dot)
 .cyb    | [OpenNIC](https://wiki.opennic.org/opennic/dot)
