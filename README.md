@@ -2,7 +2,7 @@
 
 This repository will later contain the implementation for a web resolver of BDNS domains. 
 
-Right now it contains description of the [blockchain-dns.info](https://blockchain.info)'s public resolver API. This API is used by BDNS browser extensions.
+Right now it contains description of the [blockchain-dns.info](https://blockchain-dns.info)'s public resolver API. This API is used by BDNS browser extensions.
 
 ## Blockchain-DNS.info API
 
@@ -77,11 +77,11 @@ Simple query:
 https://bdns.io/r/nx.bit
 
 Query with preserved order of IP entries:
-https://bdns.me/r/t411.bit?r=0
+https://bdns.at/r/t411.bit?r=0
 
-First IP entry, preserved order:
+First IP entry, preserving order:
 https://bdns.bz/r/rutracker.lib?n=1&r=0
 
 A single random entry:
-https://bdns.us/r/flibusta.lib?n=1
+https://bdns.ws/r/flibusta.lib?n=1
 
