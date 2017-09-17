@@ -83,5 +83,5 @@ First IP entry, preserving order:
 https://bdns.bz/r/rutracker.lib?n=1&r=0
 
 A single random entry:
-https://bdns.ws/r/flibusta.lib?n=1
+https://bdns.ws/r/register.bbs?n=1
 
