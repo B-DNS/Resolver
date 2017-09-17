@@ -32,7 +32,7 @@ bdns.ws
 
 **DOMAIN_TO_RESOLVE** is the domain name of interest, belonging to one of the supported TLDs:
 
-TLD     | Description
+TLD     | Authority
 ------- | ---------------------------------
 .bit    | ![](https://blockchain-dns.info/img/menu-namecoin.png) [Namecoin](https://namecoin.org)
 .emc    | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.com)
@@ -70,6 +70,8 @@ Code      | Description
 --------- | --------------------------
 200       | Response contains list of IPs, separated by CR/LF (essentially putting every IP on its own line).
 404       | Response contains string `nx`. This may indicate that the domain doesn't exist, has no IP entries (which is common for Namecoin and Emercoin) or that there was an error.
+
+Both response types are cached for approximately 10 minutes.
 
 ### Examples
 
