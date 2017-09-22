@@ -30,6 +30,8 @@ bdns.us
 bdns.ws
 ```
 
+There are also several unlisted API servers that you can find by scanning existing `bdns.*` domains (they might use invalid/self-signed HTTPS certs).
+
 **DOMAIN_TO_RESOLVE** is the domain name of interest, belonging to one of the supported TLDs:
 
 TLD     | Authority
