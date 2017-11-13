@@ -56,6 +56,10 @@ TLD     | Authority
 .oz     | [OpenNIC](https://wiki.opennic.org/opennic/dot)
 .parody | [OpenNIC](https://wiki.opennic.org/opennic/dot)
 .pirate | [OpenNIC](https://wiki.opennic.org/opennic/dot)
+.ku     | [OpenNIC](https://wiki.opennic.org/opennic/dot)
+.te     | [OpenNIC](https://wiki.opennic.org/opennic/dot)
+.ti     | [OpenNIC](https://wiki.opennic.org/opennic/dot)
+.uu     | [OpenNIC](https://wiki.opennic.org/opennic/dot)
 
 **QUERY** is **FUNC**-dependent and is the only optional part built using regular URL encoding. 
 
