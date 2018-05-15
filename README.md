@@ -21,14 +21,16 @@ https://BASE_DOMAIN/FUNC/DOMAIN_TO_RESOLVE?QUERY
 ```
 bdns.at
 bdns.by
-bdns.bz
 bdns.co
 bdns.im
 bdns.io
-bdns.name
-bdns.us
-bdns.ws
+bdns.link
+bdns.nu
+bdns.pro
+b-dns.se
 ```
+
+These domains are no more functional ([details](https://blockchain-dns.info/#laghaus)): ~~bdns.bz, bdns.name, bdns.us, bdns.ws, bdns.su, bdns.tv, bdns.mn~~.
 
 There are also several unlisted API servers that you can find by scanning existing `bdns.*` domains (they might use invalid/self-signed HTTPS certs).
 
@@ -61,7 +63,7 @@ TLD     | Authority
 .ti     | [OpenNIC](https://wiki.opennic.org/opennic/dot)
 .uu     | [OpenNIC](https://wiki.opennic.org/opennic/dot)
 
-**QUERY** is **FUNC**-dependent and is the only optional part built using regular URL encoding. 
+**QUERY** is **FUNC**-dependent and is the only optional part built using regular URL encoding.
 
 ### Resolve (`r`)
 
