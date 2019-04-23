@@ -54,6 +54,6 @@ pm2 save
 
 ## API Documentation
 
-Coming soon...
+See the API documentation (served out of the docs folder) at https://docs.trtlnic.com/
 
 ###### (c) 2019 The TurtleCoin Developers
