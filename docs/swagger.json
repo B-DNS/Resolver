@@ -1,0 +1,255 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "This document outlines the public API methods available using the TurtleNIC DNS Resolver Interface over HTTPS",
+    "version": "0.0.1-oas3",
+    "title": "TurtleNIC DNS Resolver Public API Interface",
+    "contact": {
+      "email": "turtlepay@protonmail.com"
+    },
+    "license": {
+      "name": "GNU Affero General Public License version 3",
+      "url": "https://opensource.org/licenses/AGPL-3.0"
+    }
+  },
+  "tags": [
+    {
+      "name": "DNS"
+    }
+  ],
+  "paths": {
+    "/{hostname}": {
+      "get": {
+        "tags": [
+          "DNS"
+        ],
+        "summary": "Look up the DNS ANY records published for the hostname",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "hostname",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "edu.trtl",
+            "description": "The hostname to look up"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "anyOf": [
+                      {
+                        "$ref": "#/components/schemas/aRecord"
+                      },
+                      {
+                        "$ref": "#/components/schemas/aaaaRecord"
+                      },
+                      {
+                        "$ref": "#/components/schemas/cnameRecord"
+                      },
+                      {
+                        "$ref": "#/components/schemas/mxRecord"
+                      },
+                      {
+                        "$ref": "#/components/schemas/nsRecord"
+                      },
+                      {
+                        "$ref": "#/components/schemas/soaRecord"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          }
+        }
+      }
+    },
+    "/{hostname}/{rrtype}": {
+      "get": {
+        "tags": [
+          "DNS"
+        ],
+        "summary": "Look up the DNS ANY records published for the hostname",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "hostname",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "edu.trtl",
+            "description": "The hostname to look up"
+          },
+          {
+            "in": "path",
+            "name": "rrtype",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "example": "a",
+            "description": "The RRTYPE to look up"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "example": [
+                      "104.31.88.244",
+                      "104.31.89.244"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "aRecord": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "example": "8.8.8.8"
+          },
+          "ttl": {
+            "type": "integer",
+            "example": 300
+          },
+          "type": {
+            "type": "string",
+            "example": "A"
+          }
+        }
+      },
+      "aaaaRecord": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "example": "2606:4700:30::681f:59f4"
+          },
+          "ttl": {
+            "type": "integer",
+            "example": 300
+          },
+          "type": {
+            "type": "string",
+            "example": "AAAA"
+          }
+        }
+      },
+      "cnameRecord": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "example": "turtlecoin.lol"
+          },
+          "type": {
+            "type": "string",
+            "example": "CNAME"
+          }
+        }
+      },
+      "mxRecord": {
+        "type": "object",
+        "properties": {
+          "exchange": {
+            "type": "string",
+            "example": "mail.turtlecoin.lol"
+          },
+          "priority": {
+            "type": "integer",
+            "example": 10
+          },
+          "type": {
+            "type": "string",
+            "example": "MX"
+          }
+        }
+      },
+      "nsRecord": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "example": "dns1.registrar-servers.com"
+          },
+          "type": {
+            "type": "string",
+            "example": "NS"
+          }
+        }
+      },
+      "soaRecord": {
+        "type": "object",
+        "properties": {
+          "nsname": {
+            "type": "string",
+            "example": "dns1.registrar-servers.com"
+          },
+          "hostmaster": {
+            "type": "string",
+            "example": "hostmaster.registrar-servers.com"
+          },
+          "serial": {
+            "type": "integer",
+            "example": 2019042202
+          },
+          "refresh": {
+            "type": "integer",
+            "example": 43200
+          },
+          "retry": {
+            "type": "integer",
+            "example": 3600
+          },
+          "expire": {
+            "type": "integer",
+            "example": 604800
+          },
+          "minttl": {
+            "type": "integer",
+            "example": 3601
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "TurtleCoin GitHub Organization",
+    "url": "https://github.com/TurtleCoin"
+  },
+  "servers": [
+    {
+      "url": "https://dns.trtlnic.com"
+    }
+  ]
+}
