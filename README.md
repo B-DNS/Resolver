@@ -38,6 +38,8 @@ There are also several unlisted API servers that you can find by scanning existi
 
 TLD     | Authority
 ------- | ---------------------------------
+.mfcoin    | [Freeland](https://freeland.land)
+.freeland    | [Freeland](https://freeland.land)
 .bit    | ![](https://blockchain-dns.info/img/menu-namecoin.png) [Namecoin](https://namecoin.org)
 .emc    | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.com)
 .coin   | ![](https://blockchain-dns.info/img/menu-emercoin.png) [Emercoin](https://emercoin.com)

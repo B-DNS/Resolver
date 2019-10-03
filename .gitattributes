@@ -1,0 +1,61 @@
+# Set default behaviour, in case users don't have core.autocrlf set.
+* text=auto
+
+## Documents
+*.doc  diff=astextplain
+*.DOC  diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF  diff=astextplain
+*.rtf  diff=astextplain
+*.RTF  diff=astextplain
+*.adoc text
+*.textile text
+*.mustache text
+*.csv text
+*.tab text
+*.tsv text
+
+# source code
+*.php text
+*.css text
+*.sass text
+*.scss text
+*.less text
+*.styl text
+*.js text
+*.coffee text
+*.json text
+*.htm text
+*.html text
+*.tmpl text
+*.xml text
+*.svg text
+*.txt text
+*.ini text
+*.inc text
+*.pl text
+*.rb text
+*.py text
+*.scm text
+*.sql text
+*.sh text
+*.bat text
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.psd binary
+*.dds binary
+*.pvr binary
+*.r16 binary
+*.fbx binary
+*.mb binary
+*.ogg binary
+*.wav binary
+*.raw binary
+*.ttf binary
+*.gpb binary

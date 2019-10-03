@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include 'parts/head.tmpl' %}
+	<body>
+		{% include 'parts/navbar.tmpl' %}
+		{% include 'parts/main/promo.tmpl' %}
+		<div class="container">
+			<div class="pt-3 text-center">
+				<h1>Произошла ошибка</h1>
+				{% if page.code == 404 %}
+					<h4>Запрашиваемая страница не найдена</h4>
+				{% elseif page.code == 500 %}
+					<h4>Произошла ошибка на стороне сервера</h4>
+				{% elseif page.code == 403 %}
+					<h4>Доступ запрещен</h4>
+				{% else %}
+					<h4>Нет информации по данной ошибке</h4>
+				{% endif %}
+			</div>
+		</div>
+		{% include 'parts/footer.tmpl' %}
+	</body>
+</html>

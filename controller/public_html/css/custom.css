@@ -1,0 +1,26 @@
+footer {
+	padding: 1rem;
+	color: #eceeec;
+}
+
+.white-wrap {
+	background-color: white;
+}
+
+.dropdown-menu {
+	border: 0;
+}
+
+.dropdown-item:hover {
+	background-color: #dd3333;
+    color: white;
+}
+
+.nav-tabs {
+	display: block;
+	text-align: center;
+}
+
+.nav-tabs > li {
+	display: inline-block;
+}

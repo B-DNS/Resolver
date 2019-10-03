@@ -1,0 +1,16 @@
+# composer плюшки
+/composer.json
+/controller/vendor/**
+# кеш шаблонов
+/view/cache/**
+# параметры
+.env
+.htaccess
+# бекапы
+*.bak
+# production
+/production/**
+/controller/public_html/css/external/**
+/controller/public_html/js/external/**
+#разное
+/resources/**

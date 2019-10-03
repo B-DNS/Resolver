@@ -1,0 +1,15 @@
+AddDefaultCharset off
+RewriteEngine On
+
+<Files *.htaccess> 
+  deny from all 
+</Files>
+
+#RewriteCond %{HTTP:X-HTTPS} !1
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^r/(.*)/?$ resolv.php?domain=$1 [L,QSA]
+RewriteRule ^x/(.*)/?$ check.php?domain=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php

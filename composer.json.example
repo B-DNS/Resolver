@@ -1,0 +1,16 @@
+{
+	"require": {
+		"php":">=7.0.0",
+		"twig/twig": "^1.0",
+		"vlucas/phpdotenv": "^3.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\Controller\\": "controller/src/",
+			"App\\Model\\": "model/"
+		}
+	},
+	"config": {
+		"vendor-dir": "controller/vendor"
+	}
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include 'parts/head.tmpl' %}
+	<body>
+		{% include 'parts/navbar.tmpl' %}
+		{% include 'parts/main/promo.tmpl' %}
+		<div class="container">
+			<div class="row">
+				<div class="one-half column" style="margin-top: 5%">
+					<h4>Blank Project</h4>
+					<p>Начальная ~MVC структура для вашего проекта на PHP 7.</p>
+					<p>Верстка отделена через Twig-шаблоны, которые располагаются в директории <code>view/</code> и имеют расширение .tmpl</p>
+					<p>Скрипты, ответственные за вывод страниц находятся в <code>controller/public_html</code> и в <code>controller/src</code></p>
+					<p>Основная логика приложения (сервиса) расположена в <code>model/</code></p>
+				</div>
+			</div>
+		</div>
+		{% include 'parts/footer.tmpl' %}
+	</body>
+</html>
