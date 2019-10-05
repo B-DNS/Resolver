@@ -6,7 +6,7 @@
 	$handler = new \App\Controller\Handler();
 	$domain = Utils::data_filter($_GET['domain']);
 	if($domain == "") {
-		exit("nx");
+		$handler->logic->domain_error();
 	}
 	
 	$handler->mfcoin_init();
@@ -15,7 +15,6 @@
 	if($domain_exists) {
 		exit("xx");
 	} else {
-		http_response_code(404);
-		exit("nx");
+		$handler->logic->domain_error();
 	}
 	

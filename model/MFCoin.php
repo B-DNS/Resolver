@@ -34,5 +34,15 @@
 		public function NVS_nameExists($entry_name = "entry") {
 			return $this->coin_connection->name_show($entry_name);
 		}
+		
+		public function NVS_nameData($entry_name = "entry"): array {
+			$data = $this->coin_connection->name_show($entry_name);
+			if(is_bool($data)) {
+				//entry not found
+				return [];
+			} else {
+				return $data;
+			}
+		}
 	}
 	
